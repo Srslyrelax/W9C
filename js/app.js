@@ -1,5 +1,5 @@
 
-let tweets = [
+var tweets = [
   {
     tweet: "Ya know I've got hairy legs..",
     username: 'SleepyJoe',
@@ -53,6 +53,20 @@ let tweets = [
     created_at: '03-03-2017',
     age: '97',
   },
+  {
+    tweet:
+      'Help me',
+    username: 'SleepyJoeVictim#4157',
+    created_at: '03-03-2017',
+    age: '12',
+  },
+  {
+    tweet:
+      'Oh noes the bad man is gonna be president',
+    username: 'SleepyJoeVictim#4201',
+    created_at: '03-03-2017',
+    age: '13',
+  },
 
   {
     tweet: "it's a right to have badakathcare",
@@ -69,6 +83,13 @@ let tweets = [
   },
 ];
 
-for (var i = 1; i < tweets.length; i++) {
-  console.log("'" + tweets[i].tweet + "'" + "\nUsername: " + tweets[i].username + "\nCreated on: " + tweets[i].created_at );
+// for (var i = 1; i < tweets.length; i++) {
+//   console.log("'" + tweets[i].tweet + "'" + "\nUsername: " + tweets[i].username + "\nCreated on: " + tweets[i].created_at );
+// }
+
+function hidethevictims(tweets) {
+  return tweets.age >= 18;
 }
+
+var novictimtweets =  tweets.filter(hidethevictims);
+console.log(novictimtweets)s
